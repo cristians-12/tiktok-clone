@@ -11,8 +11,10 @@ const PostMainLikes = ({ post }: PostMainCompTypes) => {
         setLikedClick(!likedClick)
         const likes = document.getElementById('likes');
         const likess = likes ? parseInt(likes.innerHTML) : 0;
-        if (likes) {
+        if (likes && likedClick) {
             likes.innerHTML = (likess + 1).toString();
+        }else if(likes){
+            likes.innerHTML = (likess - 1).toString();
         }
     }
 

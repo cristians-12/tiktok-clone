@@ -37,7 +37,7 @@ const PostMain = ({ post }: PostMainCompTypes) => {
                 </div>
                 <div className='relative flex items-center justify-center h-[85vh] lg:h-[70vh] pt-5'>
                     <div className='w-[40vh] h-full'>
-                        <video loop muted autoPlay className='rounded-xl object-cover mx-auto h-full' id={`video-${post?.id}`} src={`${post?.video_url}`}>
+                        <video loop controls muted autoPlay className='rounded-xl object-cover mx-auto h-full' id={`video-${post?.id}`} src={`${post?.video_url}`}>
 
                         </video>
                     </div>

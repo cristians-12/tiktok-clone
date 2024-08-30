@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import ClientOnly from "./components/ClientOnly";
 import PostMain from "./components/PostMain";
 import MainLayout from "./layouts/MainLayout";
+
+export const metadata:Metadata = {
+  title: 'Tiktok',
+  keywords: ['videos', 'cool', 'funny', 'fyp']
+}
 
 export default function Home (){
   return(
@@ -30,7 +36,7 @@ export default function Home (){
               likes:[],
               profile:{
                 id:'1',
-                name: 'test',
+                name: 'Sheim',
                 image: '/images/placeholder-user.jpg'
               }
             }} />
