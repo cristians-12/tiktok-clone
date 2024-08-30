@@ -6,7 +6,7 @@ export default function Home (){
   return(
     <>
       <MainLayout>
-        <div>
+        <div className="pt-14">
          <ClientOnly>
             <PostMain post={{
               id: '123',

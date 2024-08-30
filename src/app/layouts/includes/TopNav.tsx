@@ -18,10 +18,10 @@ const TopNav = () => {
     }
 
     return (
-        <div className='lg:px-1 lg:py-3 p-5 flex items-center justify-around border-b-[1px] border-gray-600'>
+        <div className='lg:px-1 lg:py-3 p-5 flex items-center justify-around border-b-[1px] border-gray-600 fixed left-[12.5%] w-full lg:left-[15%] lg:pe-[15%] z-40'>
             <div>
                 <Link href={'/'} >
-                    <Image width={400} height={300} className='lg:w-[30%] w-[40%]' src="/images/tiktok-logo.png" alt="" />
+                    <Image width={400} height={300} className='lg:w-[50%] w-[40%]' src="/images/tiktok-logo.png" alt="" />
                 </Link>
             </div>
             <div className='relative lg:w-[40%] lg:block hidden'>
