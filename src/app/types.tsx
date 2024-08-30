@@ -18,4 +18,5 @@ export interface Post{
     text:string;
     created_at:string;
     profile:RandomUsers;
+    likes:string[];
 }
