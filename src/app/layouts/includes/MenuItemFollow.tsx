@@ -12,7 +12,6 @@ const MenuItemFollow = ({user}: MenuItemFollowCompTypes) => {
             <p className='truncate font-bold'>{user?.name}</p>
             <p className='text-[10px]'>{user?.name}</p>
           </div>
-          
         </Link>
     </>
   )

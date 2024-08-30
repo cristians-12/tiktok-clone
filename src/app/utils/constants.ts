@@ -1,0 +1,1 @@
+export const pColor:string = '#F12B56';

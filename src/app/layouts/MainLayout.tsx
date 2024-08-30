@@ -9,7 +9,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     return (
         <>  
             <TopNav/>
-            <div className={`flex justify-between w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}>
+            <div className={`w-full lg:ps-[15%] ps-[15%] px-0 ${pathname == '/' ? '' : ''}`}>
                 <SideNavMain/>
                 {children}
             </div>

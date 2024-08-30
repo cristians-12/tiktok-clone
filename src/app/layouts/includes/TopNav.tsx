@@ -26,7 +26,7 @@ const TopNav = () => {
             </div>
             <div className='relative lg:w-[40%] lg:block hidden'>
                 <input type="text" placeholder='Buscar' onChange={handleSearchName} className=' focus:outline-none bg-[transparent] w-[100%] border border-gray-100 px-5 py-2 rounded-2xl' />
-                <div className='absolute top-12 w-full bg-[#252525] rounded-lg px-5 py-2'>
+                <div className='absolute top-12 w-full bg-[#252525] rounded-lg px-5 py-2 hidden'>
                     <div className='hover:bg-[#F12B56] p-2'>
                         <Link href={`/profile/1`}  >
                             <Image src={''} />
