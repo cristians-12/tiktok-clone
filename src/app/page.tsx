@@ -20,6 +20,19 @@ export default function Home (){
                 image: '/images/placeholder-user.jpg'
               }
             }} />
+            <PostMain post={{
+              id: '123',
+              user_id: '1',
+              video_url: 'https://cdn.pixabay.com/video/2020/08/14/47213-451041047_large.mp4',
+              text: 'Yesterday walk',
+              created_at: 'today',
+              profile:{
+                id:'1',
+                name: 'test',
+                image: '/images/placeholder-user.jpg'
+              }
+            }} />
+            
          </ClientOnly>
         </div>
       </MainLayout>
