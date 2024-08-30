@@ -29,7 +29,7 @@ const TopNav = () => {
                 <div className='absolute top-12 w-full bg-[#252525] rounded-lg px-5 py-2 hidden'>
                     <div className='hover:bg-[#F12B56] p-2'>
                         <Link href={`/profile/1`}  >
-                            <Image src={''} />
+                            {/* <Image src={''} /> */}
                             <div>Profile 1</div>
                         </Link>
                     </div>
