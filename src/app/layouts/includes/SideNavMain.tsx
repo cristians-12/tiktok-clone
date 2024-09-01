@@ -10,7 +10,7 @@ const SideNavMain = () => {
     const pathname = usePathname()
     return (
         <div className=''>
-            <div className='fixed h-screen left-0 lg:w-[16%] w-[60px] flex flex-col px-5 gap-3 pt-3 border-e-[1px] lg:border-e-0 border-gray-600'>
+            <div className='fixed h-screen left-0 lg:w-[16%] w-[50px] flex flex-col lg:px-5 gap-3 px-3 pt-3 border-e-[1px] lg:border-e-0 border-gray-600'>
                 <div className=' border-gray-600 pt-2'>
                     <Link href={'/'}>
                         <div className={`flex items-center gap-5 ${pathname == '/' ? 'text-[#FF3B5C] font-extrabold' : ''}`}>
@@ -18,7 +18,7 @@ const SideNavMain = () => {
                             <span className='lg:block hidden'>Para ti</span>
                         </div>
                     </Link>
-                    <div className={`flex pt-2 items-center gap-5 ${pathname == '/follow' ? 'text-[#FF3B5C] font-extrabold' : ''}`}>
+                    <div className={`flex w-full pt-2 items-center gap-5 ${pathname == '/follow' ? 'text-[#FF3B5C] font-extrabold' : ''}`}>
                         <RiUserFollowLine size={30} />
                         <span className='lg:block hidden'>Siguiendo</span>
                     </div>
