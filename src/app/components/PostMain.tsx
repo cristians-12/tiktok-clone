@@ -11,7 +11,7 @@ const PostMain = ({ post }: PostMainCompTypes) => {
     useEffect(() => {
         const video = videoRef.current
         const postMainElement = postMainRef.current
-        
+
         if (postMainElement && video) {
             console.log(videoRef)
             const observador = new IntersectionObserver((e) => {
