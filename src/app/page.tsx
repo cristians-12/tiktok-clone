@@ -41,6 +41,19 @@ export default function Home() {
               }
             }} />
 
+            <PostMain post={{
+              id: '123453',
+              user_id: '1',
+              video_url: 'https://cdn.pixabay.com/video/2024/06/10/216134_large.mp4',
+              text: 'En peru',
+              created_at: 'today',
+              likes: ['SHEIM', 'eduardo', 'tilin'],
+              profile: {
+                id: '1',
+                name: 'Santibau',
+                image: 'https://media-bog2-1.cdn.whatsapp.net/v/t61.24694-24/421009027_357644573802537_9215783916922658817_n.jpg?ccb=11-4&oh=01_Q5AaICKYO01aL0Vy3Npgne7uEKIoE7x9Ef0U9z9gGh72z0pJ&oe=66E1A71D&_nc_sid=5e03e0&_nc_cat=102'
+              }
+            }} />
           </ClientOnly>
         </div>
       </MainLayout>
