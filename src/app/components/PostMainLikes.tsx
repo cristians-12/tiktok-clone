@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { PostMainCompTypes } from '../types'
 import { AiFillHeart } from 'react-icons/ai';
 import { CiHeart } from 'react-icons/ci';
+import { FaCommentDots, FaRegCommentDots, FaShare, FaShareAlt } from 'react-icons/fa';
 
 const PostMainLikes = ({ post }: PostMainCompTypes) => {
 
@@ -22,12 +23,18 @@ const PostMainLikes = ({ post }: PostMainCompTypes) => {
     return (
         <>
             <div id={`PostMainLikes-${post?.id}`} className=''>
-                <div className='absolute right-[9%]  bottom-32 w-10'>
+                <div className='absolute right-[9%] flex flex-col items-center gap-5 bottom-32 w-10'>
                     <button onClick={() => handleLike()}>
                     {
                         likedClick ? (<AiFillHeart  color={post.likes?.length > 0 ? '#ff2626' : 'gray'} size={30} />) : ( <CiHeart size={30}/>)
                     }
                     <span className='text-white' id='likes'>{post?.likes.length}</span>
+                    </button>
+                    <button>
+                        <FaRegCommentDots size={25}/>
+                    </button>
+                    <button>
+                        <FaShare size={25}/>
                     </button>
                 </div>
             </div>
