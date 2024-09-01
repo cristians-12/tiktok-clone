@@ -12,6 +12,7 @@ const PostMain = ({ post }: PostMainCompTypes) => {
 
         if (postMainElement) {
             let observador = new IntersectionObserver((e) => {
+                console.log('hola')
                 e[0].isIntersecting ? video.play() : video.pause()
             }, { threshold: [0.6] })
             observador.observe(postMainElement)
