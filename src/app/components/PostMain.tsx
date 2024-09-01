@@ -28,7 +28,7 @@ const PostMain = ({ post }: PostMainCompTypes) => {
     }, [post?.id])
 
     const handleClick: React.MouseEventHandler<HTMLVideoElement> = (event) => {
-        pause ? videoRef.current?.pause() : videoRef.current?.play();
+        !pause ? videoRef.current?.pause() : videoRef.current?.play();
         setPause(!pause)
     };
 
