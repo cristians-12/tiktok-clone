@@ -26,12 +26,12 @@ const PostMainLikes = ({ post }: PostMainCompTypes) => {
                 <div className='absolute right-[9%] flex flex-col items-center gap-5 bottom-14 w-10'>
                     <button onClick={() => handleLike()}>
                     {
-                        likedClick ? (<AiFillHeart  color={post.likes?.length > 0 ? '#ff2626' : 'gray'} size={30} />) : ( <CiHeart size={30}/>)
+                        likedClick ? (<AiFillHeart  color={post.likes?.length > 0 ? '#ff2626' : 'gray'} size={30} />) : ( <AiFillHeart size={30}/>)
                     }
                     <span className='text-white' id='likes'>{post?.likes.length}</span>
                     </button>
                     <button>
-                        <FaRegCommentDots size={25}/>
+                        <FaCommentDots size={25}/>
                     </button>
                     <button>
                         <FaShare size={25}/>
