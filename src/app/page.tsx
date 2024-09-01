@@ -31,7 +31,7 @@ export default function Home() {
               id: '12345',
               user_id: '1',
               video_url: 'https://cdn.pixabay.com/video/2020/08/14/47213-451041047_large.mp4',
-              text: 'Yesterday walk',
+              text: 'De paseo por el rio',
               created_at: 'today',
               likes: [],
               profile: {
