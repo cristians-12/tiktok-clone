@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Post, PostMainCompTypes } from '../types'
 import Image from 'next/image'
 import PostMainLikes from './PostMainLikes'
@@ -7,6 +7,7 @@ import PostMainLikes from './PostMainLikes'
 const PostMain = ({ post }: PostMainCompTypes) => {
     const videoRef = useRef<HTMLVideoElement>(null)
     const postMainRef = useRef<HTMLDivElement>(null)
+    const [pause, setPause] = useState(false);
 
     useEffect(() => {
         const video = videoRef.current
@@ -25,6 +26,11 @@ const PostMain = ({ post }: PostMainCompTypes) => {
             }
         }
     }, [post?.id])
+
+    const handleClick: React.MouseEventHandler<HTMLVideoElement> = (event) => {
+        pause ? videoRef.current?.pause() : videoRef.current?.play();
+        setPause(!pause)
+    };
 
     return (
         <>
@@ -45,7 +51,7 @@ const PostMain = ({ post }: PostMainCompTypes) => {
                 </div>
                 <div className='relative flex items-center justify-center h-[85vh] lg:h-[70vh] pt-5'>
                     <div className='w-[40vh] h-full'>
-                        <video ref={videoRef} loop muted autoPlay className='rounded-xl object-cover mx-auto h-full' id={`video-${post?.id}`} src={`${post?.video_url}`} />
+                        <video onClick={handleClick} ref={videoRef} loop muted autoPlay className='rounded-xl object-cover mx-auto h-full' id={`video-${post?.id}`} src={`${post?.video_url}`} />
 
                     </div>
                     <PostMainLikes post={post} />
