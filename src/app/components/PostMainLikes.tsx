@@ -23,7 +23,7 @@ const PostMainLikes = ({ post }: PostMainCompTypes) => {
     return (
         <>
             <div id={`PostMainLikes-${post?.id}`} className=''>
-                <div className='absolute right-[9%] flex flex-col items-center gap-5 bottom-32 w-10'>
+                <div className='absolute right-[9%] flex flex-col items-center gap-5 bottom-14 w-10'>
                     <button onClick={() => handleLike()}>
                     {
                         likedClick ? (<AiFillHeart  color={post.likes?.length > 0 ? '#ff2626' : 'gray'} size={30} />) : ( <CiHeart size={30}/>)

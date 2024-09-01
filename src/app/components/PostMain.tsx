@@ -1,27 +1,34 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Post, PostMainCompTypes } from '../types'
 import Image from 'next/image'
 import PostMainLikes from './PostMainLikes'
 
 const PostMain = ({ post }: PostMainCompTypes) => {
+    const videoRef = useRef<HTMLVideoElement>(null)
+    const postMainRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        const video = document.getElementById(`video-${post?.id}`) as HTMLVideoElement
-        const postMainElement = document.getElementById(`PostMain-${post?.id}`)
-
-        if (postMainElement) {
-            let observador = new IntersectionObserver((e) => {
-                console.log('hola')
+        const video = videoRef.current
+        const postMainElement = postMainRef.current
+        
+        if (postMainElement && video) {
+            console.log(videoRef)
+            const observador = new IntersectionObserver((e) => {
                 e[0].isIntersecting ? video.play() : video.pause()
             }, { threshold: [0.6] })
+
             observador.observe(postMainElement)
+
+            return () => {
+                observador.unobserve(postMainElement)
+            }
         }
-    })
+    }, [post?.id])
 
     return (
         <>
-            <div className={`PostMain-${post?.id} w-full`}>
+            <div ref={postMainRef} className={`PostMain-${post?.id} w-full`}>
 
                 <div className='cursor-pointer border-b-[1px] p-5 border-gray-600 justify-between flex items-center w-full'>
                     <div>
@@ -38,9 +45,8 @@ const PostMain = ({ post }: PostMainCompTypes) => {
                 </div>
                 <div className='relative flex items-center justify-center h-[85vh] lg:h-[70vh] pt-5'>
                     <div className='w-[40vh] h-full'>
-                        <video loop controls muted autoPlay className='rounded-xl object-cover mx-auto h-full' id={`video-${post?.id}`} src={`${post?.video_url}`}>
+                        <video ref={videoRef} loop muted autoPlay className='rounded-xl object-cover mx-auto h-full' id={`video-${post?.id}`} src={`${post?.video_url}`} />
 
-                        </video>
                     </div>
                     <PostMainLikes post={post} />
                 </div>

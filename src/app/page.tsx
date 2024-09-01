@@ -15,9 +15,9 @@ export default function Home (){
         <div className="pt-14">
          <ClientOnly>
             <PostMain post={{
-              id: '123',
+              id: '12',
               user_id: '1',
-              video_url: 'https://cdn.pixabay.com/video/2024/07/27/223461_large.mp4',
+              video_url: 'https://cdn.pixabay.com/video/2024/07/14/221180_large.mp4',
               text: 'Cool sea!',
               created_at: 'today',
               likes:['pedro', 'tilin'],
@@ -28,7 +28,7 @@ export default function Home (){
               }
             }} />
             <PostMain post={{
-              id: '123',
+              id: '12345',
               user_id: '1',
               video_url: 'https://cdn.pixabay.com/video/2020/08/14/47213-451041047_large.mp4',
               text: 'Yesterday walk',
